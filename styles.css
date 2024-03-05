@@ -1,0 +1,361 @@
+body {
+    margin: 0;
+    font-family: "TT Lakes", sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 88px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 0 24px;
+    }
+}
+
+.header::after {
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 1px;
+}
+
+.header__menu-button {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.header__logo {
+    width: 96px;
+    height: 51px;
+}
+
+.header__menu,
+.header__call-button,
+.header__chat-button,
+.header__profile-button,
+.header__submit-button,
+.header__check-status-button {
+    height: 40px;
+}
+
+
+
+@media (min-width: 320px) {
+    .header__call-button,
+    .header__chat-button,
+    .header__profile-button {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__call-button,
+    .header__chat-button,
+    .header__profile-button {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .header::before {
+        content: "";
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 1px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header::after,
+    .header::before {
+        margin-left: 4px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__menu,
+    .header__logo,
+    .header__call-button,
+    .header__chat-button,
+    .header__profile-button,
+    .header__submit-button,
+    .header__check-status-button {
+        margin-left: 0;
+        margin-right: 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .header {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__call-button {
+        margin-left: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__check-status-button {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__menu {
+        order: -2;
+    }
+}
+
+@media (min-width: 320px) {
+    .header__submit-button,
+    .header__check-status-button {
+        order: 2;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+.scroll-bar {
+    display: flex;
+    overflow: scroll;
+    margin-left: 16px;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .scroll-bar {
+        margin-left: 24px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .scroll-bar {
+        margin-left: 32px;
+        margin-right: 32px;
+        flex-wrap: wrap;
+    }
+}
+
+.scroll-bar::before {
+    content: "";
+    z-index: 1;
+    width: 5%;
+    height: 40px;
+    position: absolute;
+    right: 0%;
+    background: linear-gradient(to right, transparent 0%, #f8f8f8 50%);
+}
+
+@media (min-width: 1120px) {
+    .scroll-bar::before {
+        display: none;
+    }
+}
+
+.scroll-bar__element {
+    display: flex;
+    align-items: center;
+}
+
+.scroll-bar__element--chosen--true {
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+}
+
+.scroll-bar__link {
+    font-size: 16px;
+    text-decoration: none;
+    margin: 8px;
+    white-space: nowrap;
+}
+
+.scroll-bar__link:link,
+.scroll-bar__link:visited,
+.scroll-bar__link:active {
+    color: #7E7E82;
+}
+
+.title__text {
+    font-size: 28px;
+    margin-left: 16px;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .title__text {
+        margin-left: 24px;
+    }
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    overflow: clip;
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #41F6D7;
+    position: absolute;
+    left: -4px;
+}
+
+.title__submit-button {
+    margin-left: auto;
+}
+
+.title__submit-button::before {
+    content: "Оставить заявку";
+}
+
+.title__check-status-button::before {
+    content: "Статус ремонта";
+}
+
+.title__submit-button::before,
+.title__check-status-button::before {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+.title__submit-button,
+.title__check-status-button {
+    display: none;
+    height: 40px;
+}
+
+.title__submit-button > a,
+.title__check-status-button > a {
+    height: 40px;
+}
+
+@media (min-width: 1120px) {
+    .title__submit-button,
+    .title__check-status-button {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (min-width: 1120px) {
+    .title__check-status-button {
+        margin-right: 32px;
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+}
+
+.article__content {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .article {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 32px;
+        margin-bottom: 40px;
+        height: 208px;
+    }
+}
+
+@media (min-width: 768px) {
+    .article__content {
+        width: 50%;
+        margin-left: 24px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1120px) {
+    .article__content {
+        width: 50%;
+        margin-left: 32px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .article__image {
+        width: 50%;
+        border-radius: 5px;
+        margin-right: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .article__image {
+        margin-right: 32px;
+    }
+}
+
+.article__text {
+    font-size: 14px;
+    line-height: 18px;
+    height: 90px;
+    overflow: clip;
+    padding: 0;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .article__text {
+        width: 312px;
+        height: 160px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .article__text {
+        width: 490px;
+    }
+}
+
+.article__read-more-button {
+    display: flex;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    font-family: "TT Lakes", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0;
+}

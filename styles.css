@@ -135,24 +135,26 @@ body {
     background-color: #f8f8f8;
 }
 
-.scroll-bar {
+.scroll-bar > ul {
     display: flex;
     overflow: scroll;
     margin-left: 16px;
     gap: 10px;
+    padding-left: 0;
 }
 
 @media (min-width: 768px) {
-    .scroll-bar {
+    .scroll-bar > ul {
         margin-left: 24px;
     }
 }
 
 @media (min-width: 1120px) {
-    .scroll-bar {
+    .scroll-bar > ul {
         margin-left: 32px;
         margin-right: 32px;
         flex-wrap: wrap;
+        overflow: auto;
     }
 }
 
@@ -290,7 +292,7 @@ body {
         justify-content: space-between;
         margin-top: 32px;
         margin-bottom: 40px;
-        height: 208px;
+        min-height: 208px;
     }
 }
 
@@ -312,17 +314,30 @@ body {
     }
 }
 
+.article__picture {
+    aspect-ratio: 360 / 208;
+}
+
 @media (min-width: 768px) {
-    .article__image {
+    .article__picture {
         width: 50%;
-        border-radius: 5px;
         margin-right: 24px;
     }
 }
 
+@media (min-width: 1120px) {
+    .article__picture {
+        margin-right: 32px;
+    }
+}
+
+.article__image {
+    width: 100%;
+}
+
 @media (min-width: 768px) {
     .article__image {
-        margin-right: 32px;
+        border-radius: 5px;
     }
 }
 
@@ -337,8 +352,8 @@ body {
 
 @media (min-width: 768px) {
     .article__text {
-        width: 312px;
-        height: 160px;
+        width: 90%;
+        height: 50%;
         margin-bottom: 10px;
     }
 }
